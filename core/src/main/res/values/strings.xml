@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Capstones</string>
+    <string name="image_detail">Image Detail</string>
+    <string name="title">Cat Breeds</string>
+    <string name="science">Felis Catus</string>
+    <string name="breeds_name">Maine Coon</string>
+    <string name="image_category">Category</string>
+</resources>

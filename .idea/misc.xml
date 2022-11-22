@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable-v24/toolbar.xml" value="0.293" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/abc_cascading_menu_item_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/abc_screen_toolbar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/abc_search_dropdown_item_icons_2line.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_achievement_popup.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_achievement_scan_all_closed.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_all_achievements.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_breed_popup.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_image_viewer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_inference_error.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_info.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_license.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_more_tabs.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_post_with_comments.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_result.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_result_explanation.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_result_feedback.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_scan_selection.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_settings.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_shopping.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_social_feed.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_user_follow_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_user_profile_editor.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_mock.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_search.xml" value="0.5" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_splash_screen.xml" value="0.28125" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/fragment_home.xml" value="0.2845082313212326" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/notification_template_big_media_custom.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/view_empty.xml" value="0.28125" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/view_error.xml" value="0.28125" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/view_how.xml" value="0.28125" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/core/src/main/res/layout/item_category.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/core/src/main/res/layout/item_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/core/src/main/res/layout/slider_item.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

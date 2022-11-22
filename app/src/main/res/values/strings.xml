@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Capstones</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_news">News</string>
+    <string name="retry">Retry</string>
+    <string name="something_wrong">Oops.. something went wrong!</string>
+    <string name="no_data">Empty Data</string>
+    <string name="image_detail">Image Detail</string>
+    <string name="title">Cat Breeds</string>
+    <string name="science">Felis Catus</string>
+    <string name="breeds_name">Maine Coon</string>
+    <string name="category">Category</string>
+    <string name="ras">Breeds</string>
+    <string name="country">Country</string>
+    <string name="general_information">General Information</string>
+    <string name="temperament">Temperament</string>
+    <string name="explore">Explore</string>
+    <string name="the_animals">The Animals</string>
+    <string name="hint">Search Animal Breeds</string>
+    <string name="search">search</string>
+    <string name="back_button">back_button</string>
+    <string name="cat_logo">cat Logo</string>
+    <string name="animal_world">Animal World</string>
+    <string name="how">Search breeds such as \'beng\', \'aby..\'</string>
+</resources>

@@ -62,7 +62,8 @@
                 android:background="@drawable/shape_search"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded" />
 
             <TextView
                 android:id="@+id/textView"
@@ -73,7 +74,8 @@
                 android:textColor="@color/search_color"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/search_view"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded" />
 
             <ImageView
                 android:layout_width="19dp"
@@ -83,7 +85,8 @@
                 android:src="@drawable/ic_baseline_search_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/search_view"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -144,19 +147,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/view" />
 
-            <ProgressBar
-                android:id="@+id/progress_bar"
-                style="?android:attr/progressBarStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:indeterminate="true"
-                android:indeterminateTint="@color/dark_grey"
-                android:indeterminateTintMode="src_atop"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="@+id/view_error"
-                app:layout_constraintStart_toStartOf="@+id/view_error"
-                app:layout_constraintTop_toBottomOf="@+id/view_error" />
+
 
             <View
                 android:id="@+id/view"
@@ -168,20 +159,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/rv_category"
                 tools:layout_editor_absoluteX="0dp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_list"
+            <com.mikelau.views.shimmer.ShimmerRecyclerViewX
+                android:id="@+id/shimmer_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                android:nestedScrollingEnabled="false"
-                android:overScrollMode="never"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_animal" />
+                app:layout_constraintTop_toBottomOf="@id/tv_animal"
+                android:overScrollMode="never"
+                app:shimmer_demo_layout="@layout/layout_demo_grid"
+                app:shimmer_demo_layout_manager_type="grid"
+                app:shimmer_demo_shimmer_color="#21ffffff" />
+
 
             <include
                 android:id="@+id/view_error"
@@ -189,16 +183,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="@+id/rv_list"
-                app:layout_constraintStart_toStartOf="@+id/rv_list"
-                app:layout_constraintTop_toTopOf="@+id/rv_list" />
+                app:layout_constraintEnd_toEndOf="@+id/shimmer_recycler_view"
+                app:layout_constraintStart_toStartOf="@+id/shimmer_recycler_view"
+                app:layout_constraintTop_toTopOf="@+id/shimmer_recycler_view" />
 
             <Button
                 android:id="@+id/btn_retry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Retry"
+                android:text="@string/retry"
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="@+id/view_error"
                 app:layout_constraintStart_toStartOf="@+id/view_error"

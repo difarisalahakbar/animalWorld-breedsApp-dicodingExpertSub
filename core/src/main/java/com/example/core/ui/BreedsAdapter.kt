@@ -1,5 +1,6 @@
 package com.example.core.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ class BreedsAdapter(private val onClick: (Breeds) -> Unit) :
 
     private val list = ArrayList<Breeds>()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setList(newList: List<Breeds>?) {
         if (newList == null) return
         list.clear()

@@ -23,4 +23,5 @@
     <string name="cat_logo">cat Logo</string>
     <string name="animal_world">Animal World</string>
     <string name="how">Search breeds such as \'beng\', \'aby..\'</string>
+    <string name="no_favorite">No Favorite</string>
 </resources>

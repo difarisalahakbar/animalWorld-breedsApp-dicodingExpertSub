@@ -1,5 +1,6 @@
 package com.example.core.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -14,6 +15,7 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>
     private val list = ArrayList<Category>()
     private var index = 0
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setList(newList: List<Category>) {
         list.clear()
         list.addAll(newList)

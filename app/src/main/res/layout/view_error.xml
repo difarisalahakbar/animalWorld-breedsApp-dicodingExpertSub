@@ -13,6 +13,8 @@
         android:text="@string/something_wrong"
         android:textAlignment="center"
         android:textSize="18sp"
+        android:layout_margin="16dp"
+        android:fontFamily="sans-serif-light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

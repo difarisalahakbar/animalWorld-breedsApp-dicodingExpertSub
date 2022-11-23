@@ -8,8 +8,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="4dp"
-        android:gravity="center"
         android:fontFamily="sans-serif-light"
+        android:gravity="center"
         android:text="@string/how"
         android:textSize="18sp" />
 

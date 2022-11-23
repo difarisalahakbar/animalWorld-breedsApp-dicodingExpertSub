@@ -20,8 +20,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles 'proguard-rules-dynamic-features.pro'
+             proguardFiles 'proguard-rules-dynamic-features.pro'
 
         }
     }

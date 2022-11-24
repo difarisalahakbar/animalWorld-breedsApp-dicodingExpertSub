@@ -47,8 +47,6 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireActivity(), SearchActivity::class.java))
         }
 
-
-
         setupCategory()
         setupListBreeds()
 

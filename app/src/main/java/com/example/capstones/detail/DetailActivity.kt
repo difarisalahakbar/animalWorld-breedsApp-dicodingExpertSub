@@ -64,8 +64,8 @@ class DetailActivity : AppCompatActivity() {
                                 image = images.data!![i]
                                 listImage.add(image)
                             }
-
                         }
+
                         sliderAdapter.setList(listImage)
                     }
                     is Resource.Error -> {

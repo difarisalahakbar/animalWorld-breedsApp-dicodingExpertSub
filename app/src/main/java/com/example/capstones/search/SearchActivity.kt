@@ -50,7 +50,7 @@ class SearchActivity : AppCompatActivity() {
             layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         }
 
-         binding.textInput.apply {
+        binding.textInput.apply {
             editText?.let { editText ->
                 setEndIconOnClickListener {
                     editText.setText("")

@@ -22,6 +22,7 @@ dependencies {
     implementation 'com.github.mike14u:shimmer-recyclerview-x:1.0.4'
     testImplementation 'org.mockito:mockito-core:3.6.0'
     testImplementation 'org.mockito:mockito-inline:3.6.0'
+    implementation 'com.github.MikeOrtiz:TouchImageView:1.4.1'
 }
 kapt {
     correctErrorTypes true

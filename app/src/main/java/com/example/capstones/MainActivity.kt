@@ -1,16 +1,16 @@
 package com.example.capstones
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.capstones.databinding.ActivityMainBinding
- import com.example.capstones.home.HomeFragment
+import com.example.capstones.home.HomeFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             supportFragmentManager.beginTransaction()
                 .replace(R.id.nav_host_fragment_activity_main, HomeFragment())
                 .commit()
-          }
+        }
 
         @Suppress("DEPRECATION")
         navView.setOnNavigationItemSelectedListener(this)
@@ -42,8 +42,19 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         when (item.itemId) {
             R.id.navigation_favorite -> {
-                val uri = Uri.parse("example://favorite")
-                startActivity(Intent(Intent.ACTION_VIEW, uri))
+                try {
+                    val intent = Intent(
+                        this@MainActivity,
+                        Class.forName("com.example.favorite.FavoriteActivity")
+                    )
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    Toast.makeText(this@MainActivity, getString(R.string.not_supported), Toast.LENGTH_SHORT).show()
+
+                    Log.d("Navigation", "Activity not found")
+                }
+                // val uri = Uri.parse("example://favorite")
+                // startActivity(Intent(Intent.ACTION_VIEW, uri))
             }
             R.id.navigation_news -> {
                 Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show()

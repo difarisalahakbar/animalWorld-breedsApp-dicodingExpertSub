@@ -13,4 +13,5 @@ class DetailViewModel @Inject constructor(private val breedsUseCase: BreedsUseCa
     fun setFavorite(breeds: Breeds, state: Boolean) = breedsUseCase.setFavoriteBreeds(breeds, state)
 
     fun getAllImage(breedId: String) = breedsUseCase.getAllImage(breedId, 2).asLiveData()
+
 }

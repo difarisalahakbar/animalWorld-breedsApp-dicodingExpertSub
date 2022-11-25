@@ -1,7 +1,9 @@
 package com.example.capstones.detail
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.capstones.R
@@ -11,6 +13,9 @@ import com.example.core.domain.model.Breeds
 import com.example.core.domain.model.Images
 import com.example.core.ui.SliderAdapter
 import com.example.core.utils.EXTRA_DETAIL
+import com.example.core.utils.EXTRA_DETAIL_IMAGE
+import com.example.core.utils.EXTRA_DETAIL_IMAGES
+import com.example.core.utils.EXTRA_DETAIL_POSITION
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,6 +26,17 @@ class DetailActivity : AppCompatActivity() {
     private val detailViewModel: DetailViewModel by viewModels()
     private lateinit var listImage: ArrayList<Images>
     private lateinit var sliderAdapter: SliderAdapter
+    private var currentPosition = 0
+    private var onceLoad = false
+
+    private val resultLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == DetailImageActivity.RESULT_CODE && result.data != null) {
+                val getPosition = result.data?.getIntExtra(EXTRA_DETAIL_POSITION, 0) as Int
+                onceLoad = true
+                binding.imgDetail.currentPagePosition = getPosition
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +48,13 @@ class DetailActivity : AppCompatActivity() {
         val breeds = intent.getParcelableExtra<Breeds>(EXTRA_DETAIL) as Breeds
 
         listImage = ArrayList()
-        sliderAdapter = SliderAdapter()
+
+        sliderAdapter = SliderAdapter { listImage ->
+            val intent = Intent(this@DetailActivity, DetailImageActivity::class.java)
+            intent.putExtra(EXTRA_DETAIL_IMAGE, listImage)
+            intent.putExtra(EXTRA_DETAIL_IMAGES, currentPosition)
+            resultLauncher.launch(intent)
+        }
 
         binding.btnBack.setOnClickListener {
             finish()
@@ -41,6 +63,7 @@ class DetailActivity : AppCompatActivity() {
         setupDetail(breeds)
         setupSlider(breeds)
     }
+
 
     private fun setupSlider(breeds: Breeds) {
         detailViewModel.getAllImage(breeds.id).observe(this) { images ->
@@ -58,15 +81,18 @@ class DetailActivity : AppCompatActivity() {
 
                         listImage.clear()
 
-                        if (images.data != null) {
-                            var image: Images
-                            for (i in 0 until images.data!!.size) {
-                                image = images.data!![i]
-                                listImage.add(image)
-                            }
-                        }
+                        if (!onceLoad) {
 
-                        sliderAdapter.setList(listImage)
+                            if (images.data != null) {
+                                var image: Images
+                                for (i in 0 until images.data!!.size) {
+                                    image = images.data!![i]
+                                    listImage.add(image)
+                                }
+                            }
+
+                            sliderAdapter.setList(listImage)
+                        }
                     }
                     is Resource.Error -> {
                         binding.progressBar.visibility = View.GONE
@@ -81,6 +107,8 @@ class DetailActivity : AppCompatActivity() {
                 }
             }
         }
+
+
     }
 
     private fun setupDetail(breeds: Breeds) {
@@ -99,9 +127,11 @@ class DetailActivity : AppCompatActivity() {
                     detailViewModel.setFavorite(this, state)
                     setFavoriteIcon(state)
                 }
-
+                sliderAdapter.setDetail(false)
                 imgDetail.setSliderAdapter(sliderAdapter)
-                imgDetail.setIndicatorAnimation(IndicatorAnimationType.WORM)
+                binding.imgDetail.setIndicatorAnimation(IndicatorAnimationType.WORM)
+                binding.imgDetail.setCurrentPageListener { position -> currentPosition = position }
+
             }
         }
     }
@@ -115,3 +145,4 @@ class DetailActivity : AppCompatActivity() {
     }
 
 }
+

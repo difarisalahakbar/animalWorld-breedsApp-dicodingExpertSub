@@ -50,7 +50,6 @@ class HomeFragment : Fragment() {
         setupCategory()
         setupListBreeds()
 
-
     }
 
     private fun setupListBreeds() {
@@ -79,6 +78,7 @@ class HomeFragment : Fragment() {
                         binding.viewError.root.visibility = View.GONE
                         breedsAdapter.setList(breeds.data)
                     }
+
                     is Resource.Error -> {
                         binding.shimmerRecyclerView.hideShimmerAdapter()
                         binding.btnRetry.visibility = View.VISIBLE

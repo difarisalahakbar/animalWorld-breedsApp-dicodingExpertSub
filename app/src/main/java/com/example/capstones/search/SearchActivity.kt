@@ -2,12 +2,16 @@ package com.example.capstones.search
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -59,7 +63,7 @@ class SearchActivity : AppCompatActivity() {
                 editText.setOnKeyListener { _, keyId, _ ->
                     if (keyId == KeyEvent.KEYCODE_ENTER) {
 
-                        showDataSearch(editText)
+                        showDataSearch(editText.text.toString().trim())
 
                         return@setOnKeyListener true
                     }
@@ -70,25 +74,21 @@ class SearchActivity : AppCompatActivity() {
                 editText.setOnEditorActionListener { _, actionId, _ ->
                     if (actionId == EditorInfo.IME_ACTION_SEARCH) {
 
-                        showDataSearch(editText)
-
-                        val inputMethodManager =
-                            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                        inputMethodManager.hideSoftInputFromWindow(editText.windowToken, 0)
+                        showDataSearch(editText.text.toString().trim())
 
                         return@setOnEditorActionListener true
                     }
                     return@setOnEditorActionListener false
                 }
+
             }
             requestFocus()
         }
     }
 
-    private fun showDataSearch(editText: EditText) {
+    private fun showDataSearch(textSearch: String) {
         binding.viewHow.root.visibility = View.GONE
-
-        searchViewModel.getSearchName(editText.text.toString().trim())
+        searchViewModel.getSearchName(textSearch)
             .observe(this@SearchActivity) {
                 breedsAdapter.setList(it)
                 binding.viewEmptys.root.visibility =

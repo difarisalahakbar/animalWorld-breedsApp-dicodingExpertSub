@@ -24,4 +24,5 @@
     <string name="animal_world">Animal World</string>
     <string name="how">Search breeds such as \'beng\', \'aby..\'</string>
     <string name="no_favorite">No Favorite</string>
+    <string name="not_supported">Sorry this feature isn\'t supported on your device</string>
 </resources>

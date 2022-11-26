@@ -23,6 +23,8 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:3.6.0'
     testImplementation 'org.mockito:mockito-inline:3.6.0'
     implementation 'com.github.MikeOrtiz:TouchImageView:1.4.1'
+    implementation 'com.gitlab.joielechong:android-bubble-navigation:1.1.0'
+
 }
 kapt {
     correctErrorTypes true

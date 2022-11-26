@@ -17,16 +17,7 @@
     </dist:module>
 
     <application>
-        <activity
-            android:name=".FavoriteActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="example"
-                    android:host="favorite"/>
-            </intent-filter>
-        </activity>
+
     </application>
 
 </manifest>

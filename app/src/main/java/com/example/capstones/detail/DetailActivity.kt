@@ -107,8 +107,6 @@ class DetailActivity : AppCompatActivity() {
                 }
             }
         }
-
-
     }
 
     private fun setupDetail(breeds: Breeds) {

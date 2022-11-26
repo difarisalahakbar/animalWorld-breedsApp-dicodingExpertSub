@@ -1,60 +1,69 @@
 package com.example.favorite
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
+import android.view.LayoutInflater
 import android.view.View
-import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.capstones.detail.DetailActivity
 import com.example.capstones.di.FavoriteModuleDependencies
 import com.example.core.ui.BreedsAdapter
 import com.example.core.utils.EXTRA_DETAIL
-import com.example.favorite.databinding.ActivityFavoriteBinding
+import com.example.favorite.databinding.FragmentFavoriteBinding
 import dagger.hilt.android.EntryPointAccessors
 import javax.inject.Inject
 
-class FavoriteActivity : AppCompatActivity()   {
 
-    private lateinit var binding: ActivityFavoriteBinding
+class FavoriteFragment : Fragment() {
+
+    private lateinit var binding: FragmentFavoriteBinding
+
     @Inject
     lateinit var factory: FavoriteViewModelFactory
     private val favoriteViewModel: FavoriteViewModel by viewModels {
         factory
     }
+
     private lateinit var breedsAdapter: BreedsAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
         DaggerFavoriteComponent.builder()
-            .context(this)
+            .context(requireContext())
             .appDependencies(
                 EntryPointAccessors.fromApplication(
-                    applicationContext,
+                    requireContext(),
                     FavoriteModuleDependencies::class.java
                 )
             )
             .build()
             .inject(this)
-        super.onCreate(savedInstanceState)
-        binding = ActivityFavoriteBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        supportActionBar?.title = getString(R.string.favorite)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        setupListFavorite()
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        // Inflate the layout for this fragment
+        binding = FragmentFavoriteBinding.inflate(inflater, container, false)
+        return binding.root
 
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == android.R.id.home){
-            finish()
-        }
-        return true
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        setupListFavorite()
     }
 
     private fun setupListFavorite() {
         breedsAdapter = BreedsAdapter {
-            val intent = Intent(this@FavoriteActivity, DetailActivity::class.java)
+            val intent = Intent(requireActivity(), DetailActivity::class.java)
             intent.putExtra(EXTRA_DETAIL, it)
             startActivity(intent)
         }
@@ -64,11 +73,9 @@ class FavoriteActivity : AppCompatActivity()   {
             layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         }
 
-        favoriteViewModel.getAllFavoriteBreeds().observe(this) {
+        favoriteViewModel.getAllFavoriteBreeds().observe(viewLifecycleOwner) {
             breedsAdapter.setList(it)
             binding.viewEmpty.root.visibility = if (it.isNotEmpty()) View.GONE else View.VISIBLE
         }
     }
-
-
 }

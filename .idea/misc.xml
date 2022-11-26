@@ -8,10 +8,14 @@
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable-v24/shape_detail.xml" value="0.1435" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable-v24/shape_splash.xml" value="0.1435" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable-v24/toolbar.xml" value="0.293" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable/bubble_navigation_bg.xml" value="0.1" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1055" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable/ic_baseline_directions_walk_24.xml" value="0.1535" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.189" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable/ic_baseline_favorite_bottom.xml" value="0.104" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable/ic_baseline_newspaper_24.xml" value="0.1" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable/shape.xml" value="0.104" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/drawable/shape_search.xml" value="0.1435" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/abc_cascading_menu_item_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/abc_screen_toolbar.xml" value="0.36666666666666664" />
@@ -39,9 +43,9 @@
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_social_feed.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_user_follow_list.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_inner_user_profile_editor.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_mock.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_search.xml" value="0.5" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_search.xml" value="0.21481481481481482" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/activity_splash_screen.xml" value="0.28125" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/item_list_placeholder.xml" value="0.22445489525438223" />
@@ -50,10 +54,12 @@
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/view_empty.xml" value="0.28125" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/view_error.xml" value="0.28125" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/layout/view_how.xml" value="0.28125" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2334330910645575" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/core/src/main/res/layout/item_category.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/core/src/main/res/layout/item_list.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/core/src/main/res/layout/slider_item.xml" value="0.25" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/favorite/src/main/res/layout/activity_favorite.xml" value="0.24711415134672937" />
+        <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/favorite/src/main/res/layout/fragment_favorite.xml" value="0.22" />
         <entry key="..\:/Users/USER/Desktop/Dicoding Submission Expert Capstone/favorite/src/main/res/layout/view_emptyy.xml" value="0.3009833262077811" />
       </map>
     </option>

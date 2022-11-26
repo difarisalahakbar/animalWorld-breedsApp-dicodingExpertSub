@@ -30,9 +30,11 @@ class DetailImageActivity : AppCompatActivity() {
 
         binding.imgDetail.setSliderAdapter(sliderAdapter)
         binding.imgDetail.setIndicatorAnimation(IndicatorAnimationType.WORM)
+
         sliderAdapter.setDetail(true)
         sliderAdapter.setList(listImages)
 
+        //getPosition page from detail
         var getPosition = intent.getIntExtra(EXTRA_DETAIL_IMAGES, 0)
         binding.imgDetail.currentPagePosition = getPosition
 

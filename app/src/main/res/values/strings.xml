@@ -5,7 +5,7 @@
     <string name="title_news">News</string>
     <string name="retry">Retry</string>
     <string name="something_wrong">Oops.. something went wrong!</string>
-    <string name="no_data">Empty Data</string>
+    <string name="no_data">Breeds not found.</string>
     <string name="image_detail">Image Detail</string>
     <string name="title">Cat Breeds</string>
     <string name="science">Felis Catus</string>
@@ -25,4 +25,6 @@
     <string name="how">Search breeds such as \'beng\', \'aby..\'</string>
     <string name="no_favorite">No Favorite</string>
     <string name="not_supported">Sorry this feature isn\'t supported on your device</string>
+    <string name="empty_breeds">You have no favorite breeds.</string>
+
 </resources>

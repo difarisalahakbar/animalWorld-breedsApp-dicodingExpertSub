@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:height="216dp">
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="216dp"
+        tools:targetApi="m">
         <shape android:shape="rectangle">
              <solid android:color="@color/purple"/>
             <corners android:bottomRightRadius="100dp"/>
         </shape>
     </item>
-    <item android:height="207dp">
+    <item android:height="207dp"
+        tools:targetApi="m">
         <shape android:shape="rectangle">
             <solid android:color="@color/purple_700"/>
             <corners android:bottomRightRadius="100dp"/>

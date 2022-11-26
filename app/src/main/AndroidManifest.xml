@@ -20,24 +20,20 @@
             android:name=".detail.DetailImageActivity"
             android:exported="false"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.Capstones.NoActionBar"/>
+            android:theme="@style/Theme.Capstones.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.Capstones.NoActionBar" />
         <activity
             android:name=".search.SearchActivity"
             android:exported="false"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.Capstones.NoActionBar" />
         <activity
             android:name=".detail.DetailActivity"
             android:exported="false"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.Capstones.NoActionBar" />
         <activity
             android:name=".splashscreen.SplashScreenActivity"

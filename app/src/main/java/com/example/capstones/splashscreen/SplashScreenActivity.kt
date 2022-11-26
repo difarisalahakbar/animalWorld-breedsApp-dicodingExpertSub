@@ -7,6 +7,7 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.capstones.MainActivity
 import com.example.capstones.R
+import com.example.core.utils.SPLASH_TIME
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,6 @@ class SplashScreenActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         },
-            500)
+            SPLASH_TIME)
     }
 }

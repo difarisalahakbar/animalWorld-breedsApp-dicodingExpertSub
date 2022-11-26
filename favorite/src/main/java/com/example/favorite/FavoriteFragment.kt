@@ -20,7 +20,8 @@ import javax.inject.Inject
 
 class FavoriteFragment : Fragment() {
 
-    private lateinit var binding: FragmentFavoriteBinding
+    private var _binding: FragmentFavoriteBinding? = null
+    private val binding get() = _binding!!
 
     @Inject
     lateinit var factory: FavoriteViewModelFactory
@@ -49,7 +50,7 @@ class FavoriteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = FragmentFavoriteBinding.inflate(inflater, container, false)
+        _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -77,5 +78,10 @@ class FavoriteFragment : Fragment() {
             breedsAdapter.setList(it)
             binding.viewEmpty.root.visibility = if (it.isNotEmpty()) View.GONE else View.VISIBLE
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

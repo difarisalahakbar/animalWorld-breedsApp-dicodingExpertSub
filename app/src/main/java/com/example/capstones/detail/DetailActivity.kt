@@ -6,6 +6,7 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.capstones.R
 import com.example.capstones.databinding.ActivityDetailBinding
 import com.example.core.data.Resource
@@ -44,6 +45,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         val breeds = intent.getParcelableExtra<Breeds>(EXTRA_DETAIL) as Breeds
 

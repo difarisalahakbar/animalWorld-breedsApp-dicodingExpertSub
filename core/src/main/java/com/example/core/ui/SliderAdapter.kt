@@ -38,7 +38,7 @@ class SliderAdapter(private val onClick: (ArrayList<Images>) -> Unit): SliderVie
         }
     }
 
-    inner class SlideViewHolder(private val binding: SliderItemBinding): SliderViewAdapter.ViewHolder(binding.root){
+    inner class SlideViewHolder(private val binding: SliderItemBinding): ViewHolder(binding.root){
         fun bind(item: Images){
             if(isDetail){
                 binding.imageView2.visibility = View.VISIBLE

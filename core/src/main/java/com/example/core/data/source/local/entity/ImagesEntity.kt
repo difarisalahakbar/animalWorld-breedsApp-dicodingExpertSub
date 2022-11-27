@@ -8,7 +8,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "images")
 data class ImagesEntity(
     @PrimaryKey
-    @NonNull
     @ColumnInfo(name = "id")
     var id: String,
 

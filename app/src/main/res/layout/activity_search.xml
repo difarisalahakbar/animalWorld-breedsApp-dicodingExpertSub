@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context=".search.SearchActivity">
+    tools:context=".search.SearchActivity"
+    tools:ignore="Overdraw">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -38,6 +39,7 @@
                 app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/shape_search"
@@ -69,7 +71,7 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
     <include
-        android:id="@+id/view_emptys"
+        android:id="@+id/view_empty"
         layout="@layout/view_empty"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"

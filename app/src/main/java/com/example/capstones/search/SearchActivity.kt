@@ -86,7 +86,7 @@ class SearchActivity : AppCompatActivity() {
         searchViewModel.getSearchName(textSearch)
             .observe(this@SearchActivity) {
                 breedsAdapter.setList(it)
-                binding.viewEmptys.root.visibility =
+                binding.viewEmpty.root.visibility =
                     if (it.isNotEmpty()) View.GONE else View.VISIBLE
             }
     }

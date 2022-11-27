@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context=".home.HomeFragment">
+    tools:context=".home.HomeFragment"
+    tools:ignore="Overdraw">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -66,7 +67,6 @@
                 tools:ignore="RtlHardcoded" />
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
@@ -92,7 +92,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="never"

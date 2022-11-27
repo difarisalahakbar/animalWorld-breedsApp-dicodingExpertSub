@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context="com.example.favorite.FavoriteFragment">
+    tools:context="com.example.favorite.FavoriteFragment"
+    tools:ignore="Overdraw">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -26,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/favorite"
                 android:textColor="@color/white_200"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textStyle="bold"/>
 
         </androidx.appcompat.widget.Toolbar>
@@ -35,7 +36,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_listFav"
+        android:id="@+id/rv_list_fav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

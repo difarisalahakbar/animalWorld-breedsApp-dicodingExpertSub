@@ -33,8 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="37dp"
                 android:layout_marginRight="37dp"
-                android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                app:boxBackgroundMode="none"
+                 app:boxBackgroundMode="none"
                 app:endIconMode="clear_text"
                 app:hintEnabled="false">
 

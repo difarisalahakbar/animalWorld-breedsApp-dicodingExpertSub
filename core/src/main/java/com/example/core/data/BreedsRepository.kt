@@ -1,5 +1,8 @@
 package com.example.core.data
 
+import android.content.Context
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.example.core.data.source.local.LocalDataSource
 import com.example.core.data.source.remote.RemoteDataSource
 import com.example.core.data.source.remote.network.ApiResponse
@@ -22,14 +25,19 @@ class BreedsRepository @Inject constructor(
     private val appExecutors: AppExecutors
 ) : IBreedsRepository {
 
-    override fun getAllBreeds(): Flow<Resource<List<Breeds>>> =
+    override fun getAllBreeds(context: Context): Flow<Resource<List<Breeds>>> =
         object : NetworkBoundResource<List<Breeds>, List<BreedResponseItem>>() {
             override fun loadFromDB(): Flow<List<Breeds>> {
                 return localDataSource.getAllBreeds().map { Helper.mapEntitiesToDomain(it) }
             }
 
+            @RequiresApi(Build.VERSION_CODES.M)
             override fun shouldFetch(data: List<Breeds>?): Boolean {
-                return data == null || data.isEmpty()
+                return if(Helper.isNetworkConnected(context)){
+                    true
+                } else{
+                    data == null || data.isEmpty()
+                }
             }
 
             override suspend fun createCall(): Flow<ApiResponse<List<BreedResponseItem>>> {

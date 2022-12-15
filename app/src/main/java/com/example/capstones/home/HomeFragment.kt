@@ -63,9 +63,9 @@ class HomeFragment : Fragment() {
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         binding.shimmerRecyclerView.adapter = breedsAdapter
 
-        homeViewModel.getAllBreeds().observe(viewLifecycleOwner) { breeds ->
+        homeViewModel.getAllBreeds(requireContext()).observe(viewLifecycleOwner) { breeds ->
             if (breeds != null) {
-                when (breeds) {
+                 when (breeds) {
                     is Resource.Loading -> {
                         binding.btnRetry.visibility = View.GONE
                         binding.viewError.root.visibility = View.GONE

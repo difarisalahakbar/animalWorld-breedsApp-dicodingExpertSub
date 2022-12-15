@@ -1,5 +1,6 @@
 package com.example.core.domain.usecase
 
+import android.content.Context
 import com.example.core.data.Resource
 import com.example.core.domain.model.Breeds
 import com.example.core.domain.model.Images
@@ -8,8 +9,8 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class BreedsInteractor @Inject constructor(private val breedsRepository: IBreedsRepository): BreedsUseCase {
-    override fun getAllBreeds(): Flow<Resource<List<Breeds>>> {
-        return breedsRepository.getAllBreeds()
+    override fun getAllBreeds(context: Context): Flow<Resource<List<Breeds>>> {
+        return breedsRepository.getAllBreeds(context)
     }
 
     override fun getSearchName(name: String): Flow<List<Breeds>> {

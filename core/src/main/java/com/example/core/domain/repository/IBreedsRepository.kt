@@ -1,12 +1,13 @@
 package com.example.core.domain.repository
 
+import android.content.Context
 import com.example.core.data.Resource
 import com.example.core.domain.model.Breeds
 import com.example.core.domain.model.Images
 import kotlinx.coroutines.flow.Flow
 
 interface IBreedsRepository {
-    fun getAllBreeds(): Flow<Resource<List<Breeds>>>
+    fun getAllBreeds(context: Context): Flow<Resource<List<Breeds>>>
 
     fun getSearchName(name: String): Flow<List<Breeds>>
 

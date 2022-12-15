@@ -1,7 +1,12 @@
 package com.example.capstones.search
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.net.NetworkInfo
 import android.os.Bundle
+import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
@@ -36,6 +41,8 @@ class SearchActivity : AppCompatActivity() {
         }
 
     }
+
+
 
     private fun setupSearch() {
         breedsAdapter = BreedsAdapter {
@@ -90,5 +97,6 @@ class SearchActivity : AppCompatActivity() {
                     if (it.isNotEmpty()) View.GONE else View.VISIBLE
             }
     }
+
 }
 

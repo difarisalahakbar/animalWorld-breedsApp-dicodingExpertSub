@@ -4,8 +4,7 @@
     package="com.example.capstones">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <application
+      <application
         android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"

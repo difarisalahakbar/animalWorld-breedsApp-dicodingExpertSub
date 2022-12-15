@@ -1,7 +1,13 @@
 package com.example.capstones
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
@@ -30,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.setNavigationChangeListener { _, position ->
             var fragment: Fragment? = null
             when (position) {
-                0 ->  fragment = HomeFragment()
+                0 -> fragment = HomeFragment()
                 1 -> {
                     val favoriteFragment = try {
                         Class.forName("com.example.favorite.FavoriteFragment")
@@ -56,4 +62,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+
 }
